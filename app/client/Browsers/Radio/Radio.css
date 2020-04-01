@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round|Comfortaa:400,700,300);
+
+#app { 
+    display: block; 
+    margin: 0 auto; 
+    overflow: visible;
+}
+
+.item .sector { 
+    transition: all .1s linear; 
+    fill: rgba(255, 255, 255, .6); 
+    stroke: #ddd;  
+}
+
+.item:hover .sector { 
+    fill: #A8DBA8; 
+}
+
+.menu-trigger { 
+    fill: #0B486B; 
+    pointer-events: auto;
+}
+
+.menu-trigger:hover { 
+    cursor: pointer; 
+}
+
+.item text { 
+    fill: #AB3E5B;
+}
+
+.item:hover text { 
+    fill: #fff; 
+}
+
+body {
+    padding: 1em;
+    line-height: 1.5;
+    font-family: Comfortaa;
+}
+
+h1 {
+    text-align: center;
+}
+
+svg {
+    border-radius: 50%;
+    width : 800px;
+}

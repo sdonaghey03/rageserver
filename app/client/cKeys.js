@@ -1,5 +1,7 @@
 "use strict";
 
+const misc = require('./cMisc');
+
 const k = {
     LEFT_MOUSE_BUTTON: 0x01, // VK_LBUTTON
     RIGHT_MOUSE_BUTTON: 0x02, // VK_RBUTTON
@@ -236,6 +238,11 @@ keys.bind(k.F4_KEY, false, function() {
     mp.events.callRemote('sKeys-F4');
 });
 
+keys.bind(k.F2_KEY, false, function () {
+    mp.gui.cursor.visible = false;
+    misc.closeCef();
+});
+
 keys.bind(k.ADD_KEY, false, function() {
     if (mp.gui.cursor.visible) return;
     mp.events.callRemote('sKeys-Num+');
@@ -244,5 +251,10 @@ keys.bind(k.ADD_KEY, false, function() {
 keys.bind(k.M_KEY, false, function() {
     if (mp.gui.cursor.visible) return;
     mp.events.callRemote('sKeys-M');
+});
+
+keys.bind(k.R_KEY, false, function () {
+    if (mp.gui.cursor.visible) return;
+    mp.events.callRemote('sKeys-R');
 });
 
