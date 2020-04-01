@@ -14,10 +14,13 @@ exports.roundNum = roundNum;
 
 // CEF //
 function prepareToCef(blurred = null) {
-	mp.gui.cursor.visible = true;
-	mp.game.ui.displayRadar(false);
-	mp.gui.chat.show(false);
-	if (blurred) mp.game.graphics.transitionToBlurred(blurred);
+    mp.gui.cursor.visible = true;
+
+    if (blurred) {
+        mp.game.ui.displayRadar(false);
+        mp.gui.chat.show(false);
+        mp.game.graphics.transitionToBlurred(blurred);
+    }
 }
 exports.prepareToCef = prepareToCef;
 
